@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Study Dashboard</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+  <div class="mainContainer">
+
+    <h1>
+      📚 Study Dashboard
+    </h1>
+
+    <div class="cardBox">
+
+      <h2>
+        Daily Study Goals
+      </h2>
+
+      <div class="inputArea">
+
+        <input type="text"
+               id="taskInput"
+               placeholder="Enter study task">
+
+        <button onclick="addTask()">
+          Add
+        </button>
+
+      </div>
+
+      <ul id="taskList">
+
+      </ul>
+
+    </div>
+
+    <div class="cardBox">
+
+      <h2>
+        Coding Hours Tracker
+      </h2>
+
+      <div class="hoursBox">
+
+        <div class="subjectCard">
+          <p>JavaScript</p>
+          <h3 id="jsHours">0 hrs</h3>
+        </div>
+
+        <div class="subjectCard">
+          <p>React</p>
+          <h3 id="reactHours">0 hrs</h3>
+        </div>
+
+        <div class="subjectCard">
+          <p>DSA</p>
+          <h3 id="dsaHours">0 hrs</h3>
+        </div>
+
+      </div>
+
+      <button onclick="updateHours()">
+        Add Study Hours
+      </button>
+
+    </div>
+
+    <div class="cardBox">
+
+      <h2>
+        Daily Streak
+      </h2>
+
+      <h1 id="streakCount">
+        🔥 0 Days
+      </h1>
+
+      <button onclick="increaseStreak()">
+        Increase Streak
+      </button>
+
+    </div>
+
+    <button class="themeBtn"
+            onclick="toggleTheme()">
+
+      Switch Theme
+
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

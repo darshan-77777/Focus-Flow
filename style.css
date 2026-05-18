@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#edf2f7;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:40px 15px;
+  transition:0.4s;
+}
+
+.mainContainer{
+  width:100%;
+  max-width:700px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.cardBox{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.inputArea{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+
+input{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#f1f1f1;
+}
+
+button{
+  border:none;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+  background:#2563eb;
+  color:white;
+  font-size:15px;
+}
+
+ul{
+  margin-top:20px;
+}
+
+li{
+  background:#f5f5f5;
+  padding:12px;
+  border-radius:10px;
+  margin-bottom:10px;
+  list-style:none;
+}
+
+.hoursBox{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:15px;
+  margin:20px 0;
+}
+
+.subjectCard{
+  background:#eff6ff;
+  padding:18px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.subjectCard h3{
+  margin-top:10px;
+}
+
+.themeBtn{
+  width:100%;
+}
+
+.darkMode{
+  background:#0f172a;
+  color:white;
+}
+
+.darkMode .cardBox{
+  background:#1e293b;
+}
+
+.darkMode li{
+  background:#334155;
+}
+
+.darkMode input{
+  background:#334155;
+  color:white;
+}
+
+.darkMode .subjectCard{
+  background:#334155;
+}

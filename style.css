@@ -111,3 +111,15 @@ li{
 .darkMode .subjectCard{
   background:#334155;
 }
+
+li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+li button{
+  background:#16a34a;
+  padding:8px 12px;
+  font-size:13px;
+}

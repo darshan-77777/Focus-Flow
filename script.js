@@ -16,7 +16,12 @@ function addTask(){
   let newTask =
     document.createElement("li");
 
-  newTask.textContent = taskText;
+  newTask.innerHTML = `
+  ${taskText}
+  <button onclick="completeTask(this)">
+    Done
+  </button>
+`;
 
   document.getElementById("taskList")
     .appendChild(newTask);
@@ -51,4 +56,15 @@ function increaseStreak(){
 function toggleTheme(){
 
   document.body.classList.toggle("darkMode");
+}
+function completeTask(button){
+
+  let selectedTask =
+    button.parentElement;
+
+  selectedTask.style.textDecoration =
+    "line-through";
+
+  selectedTask.style.opacity =
+    "0.6";
 }

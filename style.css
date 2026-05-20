@@ -123,3 +123,12 @@ li button{
   padding:8px 12px;
   font-size:13px;
 }
+
+.taskButtons{
+  display:flex;
+  gap:8px;
+}
+
+.deleteBtn{
+  background:#dc2626;
+}

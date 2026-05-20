@@ -16,11 +16,21 @@ function addTask(){
   let newTask =
     document.createElement("li");
 
-  newTask.innerHTML = `
-  ${taskText}
-  <button onclick="completeTask(this)">
-    Done
-  </button>
+newTask.innerHTML = `
+  <span>${taskText}</span>
+
+  <div class="taskButtons">
+
+    <button onclick="completeTask(this)">
+      Done
+    </button>
+
+    <button onclick="deleteTask(this)"
+            class="deleteBtn">
+      Delete
+    </button>
+
+  </div>
 `;
 
   document.getElementById("taskList")
@@ -67,4 +77,10 @@ function completeTask(button){
 
   selectedTask.style.opacity =
     "0.6";
+}
+
+function deleteTask(button){
+
+  button.parentElement.parentElement.remove();
+
 }

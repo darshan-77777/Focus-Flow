@@ -89,3 +89,9 @@ function deleteTask(button){
   button.parentElement.parentElement.remove();
 
 }
+function clearTasks(){
+
+  document.getElementById("taskList").innerHTML =
+    "";
+
+}

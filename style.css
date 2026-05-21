@@ -132,3 +132,8 @@ li button{
 .deleteBtn{
   background:#dc2626;
 }
+#currentDate{
+  text-align:center;
+  margin-bottom:20px;
+  color:#64748b;
+}

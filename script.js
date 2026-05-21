@@ -1,3 +1,8 @@
+let todayDate =
+  new Date();
+
+document.getElementById("currentDate").textContent =
+  todayDate.toDateString();
 let streakValue = 0;
 
 let jsValue = 0;

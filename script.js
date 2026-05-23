@@ -120,3 +120,43 @@ function loadTasks(){
 }
 
 loadTasks();
+let totalSeconds = 1500;
+
+let timerRunning = false;
+
+function startTimer(){
+
+  if(timerRunning){
+    return;
+  }
+
+  timerRunning = true;
+
+  let timerInterval = setInterval(function(){
+
+    let minutes =
+      Math.floor(totalSeconds / 60);
+
+    let seconds =
+      totalSeconds % 60;
+
+    if(seconds < 10){
+      seconds = "0" + seconds;
+    }
+
+    document.getElementById("timerText").textContent =
+      minutes + ":" + seconds;
+
+    totalSeconds--;
+
+    if(totalSeconds < 0){
+
+      clearInterval(timerInterval);
+
+      timerRunning = false;
+
+      alert("Study Session Completed ✅");
+    }
+
+  },1000);
+}

@@ -42,6 +42,7 @@ newTask.innerHTML = `
     .appendChild(newTask);
 
   document.getElementById("taskInput").value = "";
+  saveTasks();
 }
 
 function updateHours(){
@@ -87,11 +88,35 @@ function completeTask(button){
 function deleteTask(button){
 
   button.parentElement.parentElement.remove();
-
+saveTasks();
 }
 function clearTasks(){
 
   document.getElementById("taskList").innerHTML =
     "";
-
+localStorage.removeItem("focusTasks");
 }
+function saveTasks(){
+
+  let allTasks =
+    document.getElementById("taskList").innerHTML;
+
+  localStorage.setItem(
+    "focusTasks",
+    allTasks
+  );
+}
+
+function loadTasks(){
+
+  let savedData =
+    localStorage.getItem("focusTasks");
+
+  if(savedData){
+
+    document.getElementById("taskList").innerHTML =
+      savedData;
+  }
+}
+
+loadTasks();

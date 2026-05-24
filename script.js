@@ -137,7 +137,14 @@ function startTimer(){
   if(timerRunning){
     return;
   }
+function resetTimer(){
 
+  totalSeconds = 1500;
+
+  document.getElementById("timerText").textContent =
+    "25:00";
+
+}
   timerRunning = true;
 
   let timerInterval = setInterval(function(){

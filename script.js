@@ -64,7 +64,15 @@ function updateHours(){
 function increaseStreak(){
 
   streakValue++;
+let progressWidth =
+  streakValue * 10;
 
+if(progressWidth > 100){
+  progressWidth = 100;
+}
+
+document.querySelector(".progressBar").style.width =
+  progressWidth + "%";
   document.getElementById("streakCount").textContent =
     "🔥 " + streakValue + " Days";
 }

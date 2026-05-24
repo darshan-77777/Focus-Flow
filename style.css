@@ -145,3 +145,9 @@ li button{
   font-size:55px;
   margin:20px 0;
 }
+#quoteText{
+  margin:20px 0;
+  font-size:18px;
+  text-align:center;
+  line-height:1.6;
+}

@@ -160,3 +160,27 @@ function startTimer(){
 
   },1000);
 }
+let quoteList = [
+
+  "Discipline beats motivation.",
+
+  "Small progress is still progress.",
+
+  "Consistency creates success.",
+
+  "Focus on becoming better daily.",
+
+  "Dream big and work silently.",
+
+  "Hard work compounds over time."
+
+];
+
+function changeQuote(){
+
+  let randomNumber =
+    Math.floor(Math.random() * quoteList.length);
+
+  document.getElementById("quoteText").textContent =
+    quoteList[randomNumber];
+}

@@ -95,6 +95,7 @@ function completeTask(button){
 
 function deleteTask(button){
 
+updateTaskCounter();
   button.parentElement.parentElement.remove();
 saveTasks();
 }
@@ -104,8 +105,11 @@ function clearTasks(){
     "";
 localStorage.removeItem("focusTasks");
 }
+updateTaskCounter();
+
 function saveTasks(){
 
+updateTaskCounter();
   let allTasks =
     document.getElementById("taskList").innerHTML;
 
@@ -117,6 +121,7 @@ function saveTasks(){
 
 function loadTasks(){
 
+  updateTaskCounter();
   let savedData =
     localStorage.getItem("focusTasks");
 
@@ -198,4 +203,12 @@ function changeQuote(){
 
   document.getElementById("quoteText").textContent =
     quoteList[randomNumber];
+}
+function updateTaskCounter(){
+
+  let totalTasks =
+    document.querySelectorAll("#taskList li").length;
+
+  document.getElementById("taskCounter").textContent =
+    "Total Tasks : " + totalTasks;
 }

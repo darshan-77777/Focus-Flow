@@ -134,7 +134,7 @@ function loadTasks(){
 
 loadTasks();
 let totalSeconds = 1500;
-
+let timerInterval;
 let timerRunning = false;
 
 function startTimer(){
@@ -152,7 +152,7 @@ function resetTimer(){
 }
   timerRunning = true;
 
-  let timerInterval = setInterval(function(){
+  timerInterval = setInterval(function(){
 
     let minutes =
       Math.floor(totalSeconds / 60);
@@ -211,4 +211,11 @@ function updateTaskCounter(){
 
   document.getElementById("taskCounter").textContent =
     "Total Tasks : " + totalTasks;
+}
+function pauseTimer(){
+
+  clearInterval(timerInterval);
+
+  timerRunning = false;
+
 }

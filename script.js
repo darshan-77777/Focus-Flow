@@ -1,3 +1,4 @@
+let completedTasks = 0;
 let todayDate =
   new Date();
 
@@ -91,6 +92,11 @@ function completeTask(button){
 
   selectedTask.style.opacity =
     "0.6";
+
+    completedTasks++;
+
+document.getElementById("completedCounter").textContent =
+  "Tasks Completed : " + completedTasks;
 }
 
 function deleteTask(button){

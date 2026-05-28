@@ -225,3 +225,33 @@ function pauseTimer(){
   timerRunning = false;
 
 }
+function showGreeting(){
+
+  let currentHour =
+    new Date().getHours();
+
+  let greetingMessage = "";
+
+  if(currentHour < 12){
+
+    greetingMessage =
+      "Good Morning Darshan ☀️";
+
+  }
+  else if(currentHour < 18){
+
+    greetingMessage =
+      "Good Afternoon Darshan 🌤️";
+
+  }
+  else{
+
+    greetingMessage =
+      "Good Evening Darshan 🌙";
+  }
+
+  document.getElementById("greetingText").textContent =
+    greetingMessage;
+}
+
+showGreeting();
